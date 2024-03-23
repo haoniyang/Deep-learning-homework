@@ -4,11 +4,11 @@ import torch
 from torch.autograd import Variable
 import torch.optim as optim
 
-import rnn
+import rnn as rnn_lstm
 
 start_token = 'G'
 end_token = 'E'
-batch_size = 64
+batch_size = 256
 
 
 def process_poems1(file_name):
@@ -218,7 +218,7 @@ def gen_poem(begin_word):
 
 
 
-run_training()  # 如果不是训练阶段 ，请注销这一行 。 网络训练时间很长。
+# run_training()  # 如果不是训练阶段 ，请注销这一行 。 网络训练时间很长。
 
 
 pretty_print_poem(gen_poem("日"))
